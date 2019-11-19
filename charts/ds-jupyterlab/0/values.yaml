@@ -29,12 +29,12 @@ jupyterhub:
         kubespawner_override:
           default_url: "/tree"
     
-    #storage:
-    #  type: "static"
-    #  static:
-    #    pvcName: "nfs-claim-home"
-    #    subPath: "home/{username}"
-    #  homeMountPath: /home/{username}
+    storage:
+      type: "static"
+      static:
+        pvcName: "myapp-nfs"
+        subPath: "home/{username}"
+      homeMountPath: /home/{username}
       # extraVolumes: 
       #   - name: jupyterhub-shared
       #     persistentVolumeClaim:
